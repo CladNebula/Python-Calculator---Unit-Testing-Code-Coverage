@@ -5,6 +5,13 @@ This repository contains a **Python calculator module** with basic arithmetic fu
 
 ---
 
+calculator_project/
+│── calculator.py            # Calculator functions with logging
+│── test_calculator.py       # Unit tests for calculator functions
+│── requirements.txt         # Dependencies for pytest & coverage
+│── README.md                # Documentation & usage guide
+
+---
 ## ⚙️ Installation Guide
 
 1. **Clone the Repository**  
