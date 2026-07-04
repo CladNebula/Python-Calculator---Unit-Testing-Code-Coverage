@@ -25,7 +25,7 @@ def test_sumar_tipo_invalido():
         calculator.sumar("diez", 5)
 
 
-# --- Pruebas adicionales opcionales (para robustecer el trabajo) ---
+# --- Pruebas adicionales ---
 
 def test_restar_numeros_negativos():
     resultado = calculator.restar(-10, -5)
