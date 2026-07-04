@@ -37,7 +37,7 @@ def dividir(a, b):
 
 
 if __name__ == "__main__":
-    # Ejemplo de uso manual (útil para tomar capturas de pantalla)
+    # Ejemplo de uso manual
     print("Suma:", sumar(15, 7))
     print("Resta:", restar(15, 7))
     print("Multiplicación:", multiplicar(15, 7))
