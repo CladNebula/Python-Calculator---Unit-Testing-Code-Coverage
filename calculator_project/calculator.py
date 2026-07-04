@@ -1,51 +1,44 @@
 """
-A simple calculator module with basic arithmetic operations.
-
-This module provides functions for addition, subtraction, multiplication,
-and division. It also includes logging to track operations and errors.
-
-Author: [Your Name]
-Date: [Today's Date]
+Módulo de calculadora simple.
+Basado en el repositorio de referencia:
+https://github.com/balram-vis/Python-Calculator---Unit-Testing-Code-Coverage
 """
 
 import logging
 
-# Configure logging
-logging.basicConfig(
-    filename="calculator.log",
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-def add(a: float, b: float) -> float:
-    """Returns the sum of two numbers."""
-    result = a + b
-    logging.info("Adding %s + %s = %s", a, b, result)
-    return result
 
-def subtract(a: float, b: float) -> float:
-    """Returns the difference of two numbers."""
-    result = a - b
-    logging.info("Subtracting %s - %s = %s", a, b, result)
-    return result
+def sumar(a, b):
+    """Suma dos números."""
+    logging.info(f"Ejecutando sumar({a}, {b})")
+    return a + b
 
-def multiply(a: float, b: float) -> float:
-    """Returns the product of two numbers."""
-    result = a * b
-    logging.info("Multiplying %s * %s = %s", a, b, result)
-    return result
 
-def divide(a: float, b: float) -> float:
-    """
-    Returns the quotient of two numbers.
+def restar(a, b):
+    """Resta dos números."""
+    logging.info(f"Ejecutando restar({a}, {b})")
+    return a - b
 
-    Raises:
-        ValueError: If division by zero is attempted.
-    """
+
+def multiplicar(a, b):
+    """Multiplica dos números."""
+    logging.info(f"Ejecutando multiplicar({a}, {b})")
+    return a * b
+
+
+def dividir(a, b):
+    """Divide dos números. Lanza ZeroDivisionError si b es 0."""
+    logging.info(f"Ejecutando dividir({a}, {b})")
     if b == 0:
-        logging.error("Division by zero attempted: %s / %s", a, b)
-        raise ValueError("Cannot divide by zero")
-    
-    result = a / b
-    logging.info("Dividing %s / %s = %s", a, b, result)
-    return result
+        logging.error("Intento de división por cero")
+        raise ZeroDivisionError("No es posible dividir por cero")
+    return a / b
+
+
+if __name__ == "__main__":
+    # Ejemplo de uso manual (útil para tomar capturas de pantalla)
+    print("Suma:", sumar(15, 7))
+    print("Resta:", restar(15, 7))
+    print("Multiplicación:", multiplicar(15, 7))
+    print("División:", dividir(15, 7))
